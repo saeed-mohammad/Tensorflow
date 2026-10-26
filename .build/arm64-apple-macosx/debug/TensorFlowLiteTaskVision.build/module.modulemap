@@ -1,0 +1,4 @@
+module TensorFlowLiteTaskVision {
+    umbrella "/Users/accura/Desktop/tensorAccura/TensorFlow/tensorflow_lite_support/ios/task/vision/apis"
+    export *
+}

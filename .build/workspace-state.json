@@ -1,0 +1,31 @@
+{
+  "object" : {
+    "artifacts" : [
+      {
+        "kind" : {
+          "xcframework" : {
+
+          }
+        },
+        "packageRef" : {
+          "identity" : "tensorflow",
+          "kind" : "root",
+          "location" : "/Users/accura/Desktop/tensorAccura/TensorFlow",
+          "name" : "TensorFlow"
+        },
+        "path" : "/Users/accura/Desktop/tensorAccura/TensorFlow/Frameworks/TensorFlowLiteTaskVisionC.xcframework",
+        "source" : {
+          "type" : "local"
+        },
+        "targetName" : "TensorFlowLiteTaskVisionC"
+      }
+    ],
+    "dependencies" : [
+
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}
