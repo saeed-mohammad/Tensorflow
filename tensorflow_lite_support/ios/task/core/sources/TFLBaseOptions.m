@@ -12,7 +12,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  ==============================================================================*/
-#import "tensorflow_lite_support/ios/task/core/sources/TFLBaseOptions.h"
+//#import "tensorflow_lite_support/ios/task/core/sources/TFLBaseOptions.h"
+#import "TFLBaseOptions.h"
 
 @implementation TFLCpuSettings
 @synthesize numThreads;

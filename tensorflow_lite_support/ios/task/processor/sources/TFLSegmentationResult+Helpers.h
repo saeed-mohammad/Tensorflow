@@ -13,7 +13,8 @@
  limitations under the License.
  ==============================================================================*/
 #include "tensorflow_lite_support/c/task/processor/segmentation_result.h"
-#import "tensorflow_lite_support/ios/task/processor/sources/TFLSegmentationResult.h"
+//#import "tensorflow_lite_support/ios/task/processor/sources/TFLSegmentationResult.h"
+#import "TFLSegmentationResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

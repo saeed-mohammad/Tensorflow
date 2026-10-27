@@ -12,7 +12,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  ==============================================================================*/
-#import "tensorflow_lite_support/ios/task/processor/sources/TFLCategory.h"
+//#import "tensorflow_lite_support/ios/task/processor/sources/TFLCategory.h"
+#import "TFLCategory.h"
 
 @implementation TFLCategory
 

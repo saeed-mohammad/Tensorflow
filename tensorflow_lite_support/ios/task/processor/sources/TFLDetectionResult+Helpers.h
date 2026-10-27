@@ -13,7 +13,8 @@
  limitations under the License.
  ==============================================================================*/
 #include "tensorflow_lite_support/c/task/processor/detection_result.h"
-#import "tensorflow_lite_support/ios/task/processor/sources/TFLDetectionResult.h"
+//#import "tensorflow_lite_support/ios/task/processor/sources/TFLDetectionResult.h"
+#import "TFLDetectionResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

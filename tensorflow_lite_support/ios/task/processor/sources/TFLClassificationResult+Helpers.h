@@ -13,7 +13,8 @@
  limitations under the License.
  ==============================================================================*/
 #include "tensorflow_lite_support/c/task/processor/classification_result.h"
-#import "tensorflow_lite_support/ios/task/processor/sources/TFLClassificationResult.h"
+//#import "tensorflow_lite_support/ios/task/processor/sources/TFLClassificationResult.h"
+#import "TFLClassificationResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

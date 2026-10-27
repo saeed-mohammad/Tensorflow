@@ -13,7 +13,8 @@
  limitations under the License.
  ==============================================================================*/
 #include "tensorflow_lite_support/c/task/processor/category.h"
-#import "tensorflow_lite_support/ios/task/processor/sources/TFLCategory.h"
+//#import "tensorflow_lite_support/ios/task/processor/sources/TFLCategory.h"
+#import "TFLCategory.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
