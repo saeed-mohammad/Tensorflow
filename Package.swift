@@ -33,6 +33,7 @@ let package = Package(
             cSettings: [
                 // === THE CRITICAL FIX ===
                 .headerSearchPath(".."),                 // parent of tensorflow_lite_support
+                // Main folders
                 .headerSearchPath("."),
                 .headerSearchPath("c"),
                 .headerSearchPath("c/task"),
@@ -40,18 +41,24 @@ let package = Package(
                 .headerSearchPath("c/task/processor"),
                 .headerSearchPath("c/task/vision"),
                 .headerSearchPath("c/task/vision/core"),
+                // iOS ObjC headers
                 .headerSearchPath("ios"),
                 .headerSearchPath("ios/sources"),
                 .headerSearchPath("ios/task/core/sources"),
                 .headerSearchPath("ios/task/processor/sources"),
                 .headerSearchPath("ios/task/vision/sources"),
                 .headerSearchPath("ios/task/vision/apis"),
+                .headerSearchPath("ios/task/vision/utils"),
+                // === THIS IS THE MISSING ONE ===
                 .headerSearchPath("odml/ios/image"),
                 .headerSearchPath("odml/ios/image/apis"),
+               .headerSearchPath("odml/ios/image/sources"),
             ],
             cxxSettings: [
                 .headerSearchPath(".."),
                 .headerSearchPath("."),
+                .headerSearchPath("odml/ios/image"),
+                .headerSearchPath("odml/ios/image/apis"),
             ],
             linkerSettings: [
                 .linkedLibrary("c++"),
