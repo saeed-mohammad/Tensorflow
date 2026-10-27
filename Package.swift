@@ -13,35 +13,33 @@ let package = Package(
         ),
     ],
     targets: [
+        // Binary C library
         .binaryTarget(
             name: "TensorFlowLiteTaskVisionC",
             path: "Frameworks/TensorFlowLiteTaskVisionC.xcframework"
         ),
+
+        // ObjC + headers wrapper
         .target(
             name: "TensorFlowLiteTaskVision",
             dependencies: [
                 "TensorFlowLiteTaskVisionC"
             ],
             path: "tensorflow_lite_support",
-            publicHeadersPath: ".",
+            exclude: [
+                // optional: exclude anything not needed
+            ],
+            publicHeadersPath: "ios/task/vision/apis",   // important
             cSettings: [
-                .headerSearchPath(".."),
-                .headerSearchPath("ios"),
-                .headerSearchPath("ios/sources"),
-                .headerSearchPath("ios/task/core/sources"),
-                .headerSearchPath("ios/task/processor/sources"),
-                .headerSearchPath("ios/task/vision/sources"),
-                .headerSearchPath("ios/task/vision/apis"),
-                .headerSearchPath("odml/ios/image"),
-                .headerSearchPath("odml/ios/image/apis"),
+                // === THE CRITICAL FIX ===
+                .headerSearchPath(".."),                 // parent of tensorflow_lite_support
+                .headerSearchPath("."),
                 .headerSearchPath("c"),
                 .headerSearchPath("c/task"),
                 .headerSearchPath("c/task/core"),
                 .headerSearchPath("c/task/processor"),
                 .headerSearchPath("c/task/vision"),
-            ],
-            cxxSettings: [
-                .headerSearchPath(".."),
+                .headerSearchPath("c/task/vision/core"),
                 .headerSearchPath("ios"),
                 .headerSearchPath("ios/sources"),
                 .headerSearchPath("ios/task/core/sources"),
@@ -50,7 +48,10 @@ let package = Package(
                 .headerSearchPath("ios/task/vision/apis"),
                 .headerSearchPath("odml/ios/image"),
                 .headerSearchPath("odml/ios/image/apis"),
-                .headerSearchPath("c"),
+            ],
+            cxxSettings: [
+                .headerSearchPath(".."),
+                .headerSearchPath("."),
             ],
             linkerSettings: [
                 .linkedLibrary("c++"),
